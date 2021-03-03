@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	background-color: #47d1d1;
+	color: #ffff;
+}
+header{
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 50px;
+	text-align: center;
+}
+body{
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 40px;
+	text-align: center;
+}
+footer{
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 15px;
+	text-align: center;
+}
+.slogan{
+	margin: 25px 100px 45px 150px;  
+}
+.button, .buttonMain{
+	display: inline-block;
+    height: 70px;
+    padding: 0 72px;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 62px;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 5px solid white;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.how_works{
+	color: #46d2d2;
+	background-color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.instr{
+	padding: 35px 225px 35px 225px;
+	font-size: 30px;
+	background-color: #d6f5f5;
+	color: #2db9b9;
+	margin-bottom: 45px;
+}
+.imgs1{
+	margin: 10px;
+}
+.image_main{
+	height: 450px !important;
+	width: 450px !important;
+}
