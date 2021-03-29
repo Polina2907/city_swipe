@@ -5,14 +5,24 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="{% static 'city_swipe_app/style_for_dipl.css' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
 	<title>CityReview</title>
 </head>
 <body>
 	<header>
-		<div class="imgs1"><img src="{% static 'city_swipe_app/9.png' %}" width="250" height="250" alt="лого"></div>		
+		<div class="imgs1"><img src="{% static 'city_swipe_app/9.png' %}" width="250" height="250" alt="лого"></div>
 		<div>Это City Review</div>
 	</header>
 	<div class="slogan">Добро пожаловать в City Review - самый быстрый способ рассказать нам о том, что вы любите или не любите в наших Сумах!</div>
-	<a href="/city_swipe_app/instruction" class="button">Начать</a>
+
+	{% if user.is_authenticated %}
+	<p>Logged as {{ user.username }}</p>
+	<a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+  	{% else %}
+	<a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">
+	  Login
+	</a>
+  	{% endif %}
 </body>
 </html>
