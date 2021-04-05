@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'city_swipe_app',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC+2'
+TIME_ZONE = 'Europe/Istanbul'
 
 USE_I18N = True
 
@@ -123,3 +124,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '673674813084-9p6gbbc0f3jb99kh0bj2m00rbbe1nrv6.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8MvOhkqR_s4coqslsfpRthu6'
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+LOGIN_URL = '/login/google-oauth2/'
+LOGIN_REDIRECT_URL = '/city_swipe_app/'
+LOGOUT_REDIRECT_URL = '/city_swipe_app/'
