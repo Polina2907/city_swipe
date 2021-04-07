@@ -130,10 +130,10 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '673674813084-9p6gbbc0f3jb99kh0bj2m00rbbe1nrv6.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8MvOhkqR_s4coqslsfpRthu6'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '51860423878-uahtkvhfhk65i78i245bn209tdgd975t.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'x4i22jVnNZAOLTSwYMdKeg2S'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
-
+SOCIAL_AUTH_GOOGLE_OAUTH2_AUTH_EXTRA_ARGUMENTS = {'prompt': 'select_account'} 
 LOGIN_URL = '/login/google-oauth2/'
-LOGIN_REDIRECT_URL = '/city_swipe_app/'
+LOGIN_REDIRECT_URL = '/city_swipe_app/instruction/'
 LOGOUT_REDIRECT_URL = '/city_swipe_app/'
