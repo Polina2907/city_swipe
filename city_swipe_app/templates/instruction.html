@@ -11,9 +11,14 @@
 	<header>
 		<div class="imgs1"><img src="{% static 'city_swipe_app/9.png' %}" width="250" height="250" alt="лого"></div>				
 	</header>
+	<div>
+		{% if user.is_authenticated %}
+			<a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+		{% endif %}
+	</div>
 	<div class="how_works"><div style="font-size: 20px">Немного инструкции :)</div>
 	Вот как это работает:</div>
 	<div class="instr">Каждый слайд показывает изображение и вопрос относящиеся к городу Сумы. Всего один вопрос, ответ на который "ДА" или "НЕТ".</div>
-	<a href="main.php" class="button">Поехали!</a>
+	<a href="../mainPage" class="button">Поехали!</a>
 </body>
 </html>

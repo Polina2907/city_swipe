@@ -10,3 +10,15 @@ def index(request):
 
 def instruction(request):
     return render(request, "instruction.html")
+
+def mainPage(request):
+    if request.user.is_authenticated:
+        return render(request, "mainPage.html")
+    else:
+        return render(request, "index.html")
+
+# def getCard(request):
+#     if request.user.is_authenticated:
+#         return render(request, "mainPage.html")
+#     else:
+#         return render(request, "index.html")

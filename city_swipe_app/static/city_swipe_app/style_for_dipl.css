@@ -3,8 +3,9 @@
 	padding: 0;
 }
 html{
-	background-color: #47d1d1;
-	color: #ffff;
+	/* background-color: #90dddd; */
+	/* color: #ffff; */
+    height: 100%;
 }
 header{
 	font-family: 'Didact Gothic', sans-serif;
@@ -15,6 +16,8 @@ body{
 	font-family: 'Didact Gothic', sans-serif;
 	font-size: 40px;
 	text-align: center;
+    background-color: #90dddd;
+    height: 100%;
 }
 footer{
 	margin-top: 15px;
@@ -85,4 +88,29 @@ footer{
 .image_main{
 	height: 450px !important;
 	width: 450px !important;
+}
+.imgMain{
+    height: 550px !important;
+	width: 550px !important;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px !important;
+	width: 550px;
+}
+button{
+    border-radius: 15px !important;
+    padding: 10px;
+    width: 150px;
 }
