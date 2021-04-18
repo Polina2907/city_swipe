@@ -16,7 +16,7 @@ body{
 	font-family: 'Didact Gothic', sans-serif;
 	font-size: 40px;
 	text-align: center;
-    background-color: #90dddd;
+    /* background-color: #00A876 !important; */
     height: 100%;
 }
 footer{
@@ -27,7 +27,13 @@ footer{
 	text-align: center;
 }
 .slogan{
-	margin: 25px 100px 45px 150px;  
+	margin: 25px 100px 45px 150px; 
+    font-size: 20px;
+    text-align: center; 
+    background-color: #FFED73;
+    border-radius: 30px;
+    /* box-shadow: 1px 2px 5px 2px grey; */
+    padding: 10px 40px 10px 25px;
 }
 .button, .buttonMain{
 	display: inline-block;
@@ -53,7 +59,7 @@ footer{
 	display: inline-block;
     height: 70px;
     padding: 0 72px;
-    color: #46d2d2 !important;
+    color: black !important;
     text-align: center;
     font-size: 17px;
     font-weight: 500;
@@ -64,10 +70,14 @@ footer{
     white-space: nowrap;
     background-color: transparent;
     border-radius: 0px;
-    border: 5px solid #46d2d2;
+    border: 5px solid #FFED73;
     cursor: pointer;
     box-sizing: border-box;
     margin: 10px;
+    border-radius: 30px;
+}
+.google-icon-wrapper{
+    display: inline;
 }
 .how_works{
 	color: #46d2d2;
