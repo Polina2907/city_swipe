@@ -19,8 +19,7 @@ def mainPage(request):
 
 def getCard(request):
     if request.user.is_authenticated:
-        a = ''
-        for card in Card.objects.raw('SELECT * FROM Card'):
-            return card
+        for card in Card.objects.raw('SELECT * FROM Card'): #ЗАПРОС
+            return HttpResponse(card.title)
     else:
-        return render(request, "index.html")
+        return redirect('/city_swipe_app/')
