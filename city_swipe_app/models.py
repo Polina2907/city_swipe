@@ -8,7 +8,6 @@ class Card(models.Model):
     avg_mark = models.IntegerField(default=0)
     latitude = models.FloatField(default=50.908407)#широта
     longitude = models.FloatField(default=34.795837)#долгота
-
-# class AppUser(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     seenCards = models.JSONField()
+    users = models.ManyToManyField(User, db_table='users_cards')
+    class Meta:
+        db_table = 'Card'
