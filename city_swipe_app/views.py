@@ -19,7 +19,12 @@ def mainPage(request):
 
 def getCard(request):
     if request.user.is_authenticated:
-        for card in Card.objects.raw('select c.id_card from Card c join usercard uc on (c.id_card != uc.id_card) join users u on (u.id_user = uc.id_user and uc.id_user = 2);'):
-            return HttpResponse(card.title)
+        id_user = request.user.id
+        #all_cards = ""
+        user_card = Card.objects.raw('select u.id from auth_user u join users_cards uc on (u.id = uc.id);')
+        all_cards = Card.objects.raw('select c.id from Card c join users_cards uc on (c.id != uc.id) join auth_user u on (u.id = uc.id and uc.id = '+ str(id_user) +');')
+        # for card in Card.objects.raw('select c.id from Card c join users_cards uc on (c.id != uc.id) join auth_user u on (u.id = uc.id and uc.id = '+ str(id_user) +');'):
+        #     all_cards += card.title + ", "
+        return HttpResponse(len(user_card))
     else:
         return redirect('/city_swipe_app/')
