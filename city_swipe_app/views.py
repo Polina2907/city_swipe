@@ -21,17 +21,22 @@ def mainPage(request):
 
 def getCard(request):
     if request.user.is_authenticated:
-        cards = []
         user_id = request.user.id
-        view_cards = Card.objects.exclude(users__id=user_id)
-        user = User.objects.get(id=user_id)
+        non_viewed_cards = Card.objects.exclude(users__id=user_id) #получаем все карточки, которые не видел пользователь
+        user = User.objects.get(id=user_id) #получаем айди юзера get=select
 
-        if len(view_cards) >= 1:
-          card = dict(id = view_cards[0].id, name = view_cards[0].title, about = view_cards[0].about, latitude = view_cards[0].latitude, longitude = view_cards[0].longitude, photo = view_cards[0].photo.url)
-          view_cards[0].users.add(user)
+        if len(non_viewed_cards) >= 1:
+          card = dict(id = non_viewed_cards[0].id, name = non_viewed_cards[0].title, about = non_viewed_cards[0].about, latitude = non_viewed_cards[0].latitude, longitude = non_viewed_cards[0].longitude, photo = non_viewed_cards[0].photo.url)
+          non_viewed_cards[0].users.add(user) #добавление юзера к касточке
           return HttpResponse(json.dumps(card), content_type='application/json')
         else:
             return HttpResponse('404', content_type='application/json')
 
     else:
         return redirect('/city_swipe_app/')
+
+def submit(request):
+    if request.user.is_authenticated:
+        card_id = request.POST['card_id']
+        answer = request.POST['answer']
+

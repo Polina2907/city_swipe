@@ -3,7 +3,7 @@
 <head>
     {% load static %}
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="{% static 'city_swipe_app/style_for_dipl.css' %}">
+	<link rel="stylesheet" href="{% static 'city_swipe_app/main.css' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
@@ -12,15 +12,16 @@
 <body>
 	<div class="mainContainer">
 		<div class="imgMain">
-
+			<span id="title"></span>
+			<img id="image" src="">
 		</div>
-		<div class="btnContainer">
-			<button name="button">YES</button>
-			<button name="button">DON'T KNOW</button>
-			<button name="button">NO</button>
-		</div>
-		
 	</div>
+	<div class="btn-container">
+		<button id="no_btn" name="button">NO</button>			
+		<button id="not_know_btn" name="button">DON'T KNOW</button>
+		<button id="yes_btn" name="button">YES</button>
+	</div>		
 	
 </body>
+<script src="{% static 'city_swipe_app/main.js' %}"></script>
 </html>
