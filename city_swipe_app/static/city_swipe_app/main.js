@@ -22,4 +22,5 @@ window.addEventListener('load', function() {
 function showCard() {
     document.getElementById('image').src = card.photo;
     document.getElementById('title').innerHTML = card.name;
+    document.getElementById('about').innerHTML = card.name;
 }

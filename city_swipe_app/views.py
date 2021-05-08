@@ -27,7 +27,7 @@ def getCard(request):
 
         if len(non_viewed_cards) >= 1:
           card = dict(id = non_viewed_cards[0].id, name = non_viewed_cards[0].title, about = non_viewed_cards[0].about, latitude = non_viewed_cards[0].latitude, longitude = non_viewed_cards[0].longitude, photo = non_viewed_cards[0].photo.url)
-          non_viewed_cards[0].users.add(user) #добавление юзера к касточке
+          non_viewed_cards[0].users.add(user) #добавление юзера к карточке
           return HttpResponse(json.dumps(card), content_type='application/json')
         else:
             return HttpResponse('404', content_type='application/json')

@@ -2,23 +2,36 @@
 	margin: 0;
 	padding: 0;
 }
-.image_main{
-	height: 450px !important;
-	width: 450px !important;
+body{
+	font-family: 'Didact Gothic', sans-serif;
+	text-align: center;
+    /* background-color: #00A876 !important; */
+    height: 100%;
+}
+header{
+    margin: 25px 150px 45px 150px; 
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    text-align: center; 
+    background-color: #FFED73;
+    border-radius: 30px;
+    padding: 15px 40px 15px 40px;
+    width: 70%;
 }
 .imgMain{
-    height: 500px !important;
-	width: 500px !important;
-    border: 1px solid black;
+    height: 400px !important;
+	width: 600px !important;
+    border: 1px solid rgba(116, 111, 111, 0.342);
     margin-top: 50px;
-    margin-bottom: 25px;
-   
+    margin-bottom: 25px; 
+    border-radius: 5px !important;  
 }
 #image{
-    height: 500px !important;
-	width: 500px !important;
+    height: 400px !important;
+	width: 600px !important;
+    border-radius: 5px !important; 
 }
-#title{
+#about{
     position: absolute;
     z-index: 1;
     
@@ -34,7 +47,6 @@ button{
     color: black !important;
     text-align: center;
     font-size: 17px !important;
-    font-weight: 500;
     line-height: 32px;
     letter-spacing: 0.6px;
     text-transform: uppercase !important;
@@ -45,17 +57,20 @@ button{
     cursor: pointer;
     /*box-sizing: border-box;*/
     margin: 10px !important;
-    border-radius: 15px !important;    
+    border-radius: 25px !important;    
     width: 150px;
-}
-#no_btn{
-    border-color: #e49393;
-}
-#yes_btn{
-    border-color: #8bc58b;
-}
-#not_know_btn{
     border-color: #FFED73;
+}
+.no_btn:hover{
+    /* color: #e25454!important; */
+    border-color:#e25454 !important;
+}
+.yes_btn:hover{
+    border-color: #86c786;
+    /* color: #86c786; */
+}
+.not_know_btn:hover{
+    border-color: grey;
 }
 .btn-container{
     display: flex;
@@ -64,4 +79,31 @@ button{
 .button:hover{
     background-color: #FFED73;
     transition: 0.3s;
+}
+.btn-logout-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-logout{
+    display: inline-block;
+    width: 82px;
+    padding: 7px 10px 7px 10px !important;
+    color: black !important;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 3px solid #e25454;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 30px;
+}
+.btn-logout:hover{
+    background-color: #e25454;
+    transition: 0.3s;
+    color: white !important;
 }
