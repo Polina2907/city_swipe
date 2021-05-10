@@ -5,23 +5,31 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="{% static 'city_swipe_app/main.css' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
 	<title>CityReview</title>
 </head>
 <body>
 	<div class="mainContainer">
-		<div class="imgMain">
-			<span id="title"></span>
-			<img id="image" src="">
+		<div class="imgMain" id="card">
 		</div>
 	</div>
 	<div class="btn-container">
-		<button id="no_btn" name="button">NO</button>			
-		<button id="not_know_btn" name="button">DON'T KNOW</button>
-		<button id="yes_btn" name="button">YES</button>
-	</div>		
-	
+		<button id="no_btn" name="button" class="answer-btn">NO</button>
+		<button id="not_know_btn" name="button" class="answer-btn">DON'T KNOW</button>
+		<button id="yes_btn" name="button" class="answer-btn">YES</button>
+	</div>
+
 </body>
 <script src="{% static 'city_swipe_app/main.js' %}"></script>
 </html>

@@ -11,3 +11,12 @@ class Card(models.Model):
     users = models.ManyToManyField(User, db_table='users_cards', blank=True)
     class Meta:
         db_table = 'Card'
+
+class UserLocation(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        primary_key=True
+    )
+    latitude = models.FloatField()#широта
+    longitude = models.FloatField()#долгота

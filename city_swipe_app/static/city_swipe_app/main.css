@@ -12,7 +12,7 @@
     border: 1px solid black;
     margin-top: 50px;
     margin-bottom: 25px;
-   
+
 }
 #image{
     height: 500px !important;
@@ -21,8 +21,15 @@
 #title{
     position: absolute;
     z-index: 1;
-    
 }
+
+#map {
+	position: relative;
+    width: 498px;
+    height: 400px;
+    outline: none;
+}
+
 .mainContainer{
     display: flex;
     flex-direction: column;
@@ -45,7 +52,7 @@ button{
     cursor: pointer;
     /*box-sizing: border-box;*/
     margin: 10px !important;
-    border-radius: 15px !important;    
+    border-radius: 15px !important;
     width: 150px;
 }
 #no_btn{

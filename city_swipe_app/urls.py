@@ -10,5 +10,7 @@ urlpatterns = [
     path('instruction/', views.instruction, name='instruction'),
     path('mainPage/', views.mainPage, name='mainPage'),
     path('getCard/', views.getCard, name='getCard'),
-    path('submit/', views.submit, name='submit'),
+    path('getUser/', views.getUser, name='getUser'),
+    path('setUserLocation/', views.setUserLocation, name='setUserLocation'),
+    path('submitAnswer/', views.submitAnswer, name='submitAnswer'),
 ]
