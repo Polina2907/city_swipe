@@ -32,7 +32,6 @@ $(document).ready(function() {
     }
 });
 
-<<<<<<< HEAD
 function getUserLocation() {
   $.get("/city_swipe_app/getUser/", {})
     .done(function(data){
@@ -138,10 +137,3 @@ function showCard(card) {
 
     document.getElementById('card').appendChild(photo);
 }
-=======
-function showCard() {
-    document.getElementById('image').src = card.photo;
-    document.getElementById('title').innerHTML = card.name;
-    document.getElementById('about').innerHTML = card.name;
-}
->>>>>>> b4f4e041c4a324fdf36676d9b30c6d4c1af7abe3
