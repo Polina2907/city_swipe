@@ -76,7 +76,7 @@ function showLocationForm() {
     let mapElem = document.createElement('div');
     let button = document.createElement('button');
     title.classList.add('title');
-    title.innerHTML = 'Вкажіть ваше місце проживання';
+    title.innerHTML = 'Вкажіть ваше місце знаходження, аби ми змогли підібрати для вас місця, де ви найчастіше буваєте';
     mapElem.id = 'map';
     button.id = 'submitLocation';
     button.innerText = 'Підтвердити'
@@ -85,7 +85,7 @@ function showLocationForm() {
       submitLocation();
     });
 
-    document.getElementById('card').appendChild(title);
+    document.getElementById('question').appendChild(title);
     document.getElementById('card').appendChild(mapElem);
     document.getElementById('card').appendChild(button);
 

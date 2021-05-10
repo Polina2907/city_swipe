@@ -20,22 +20,23 @@
 	<title>CityReview</title>
 </head>
 <body>
-	<header>
-
-	</header>
-	<div class="btn-logout-container">
-		{% if user.is_authenticated %}
-			<a class="btn-logout" href="{% url 'logout' %}">Вийти</a>
-		{% endif %}
+	<div class="head-container">
+		<div id="question">	</div>
+		<div class="btn-logout-container" id="logout-container-id">
+			{% if user.is_authenticated %}
+				<a class="btn-logout" href="{% url 'logout' %}">Вийти</a>
+			{% endif %}
+		</div>
 	</div>
+	
 	<div class="mainContainer">
 		<div class="imgMain" id="card">
 		</div>
 	</div>
 	<div class="btn-container">
-		<button id="no_btn" name="button" class="answer-btn">NO</button>
-		<button id="not_know_btn" name="button" class="answer-btn">DON'T KNOW</button>
-		<button id="yes_btn" name="button" class="answer-btn">YES</button>
+		<button id="no_btn" name="button" class="answer-btn no_btn">ні</button>
+		<button id="not_know_btn" name="button" class="answer-btn not_know_btn">не знаю</button>
+		<button id="yes_btn" name="button" class="answer-btn yes_btn">так</button>
 	</div>
 
 </body>

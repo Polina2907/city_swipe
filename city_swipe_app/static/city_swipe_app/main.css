@@ -8,25 +8,34 @@ body{
     /* background-color: #00A876 !important; */
     height: 100%;
 }
-header{
-    margin: 25px 150px 45px 150px;
+.head-container{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.head-container:last-child{
+    flex-grow: 3 !important;
+}
+#question{
+    margin: 25px 100px 45px 100px;
     letter-spacing: 0.5px;
     font-size: 20px;
     text-align: center;
     background-color: #FFED73;
     border-radius: 30px;
     padding: 15px 40px 15px 40px;
-    width: 70%;
+    width: 55%;
+    flex-grow: 1;
 }
 .imgMain{
     height: 400px !important;
 	width: 600px !important;
     border: 1px solid rgba(116, 111, 111, 0.342);
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 25px;
     border-radius: 5px !important;
 }
-#image{
+#cardImage{
     height: 400px !important;
 	width: 600px !important;
     border-radius: 5px !important;
@@ -35,14 +44,21 @@ header{
     position: absolute;
     z-index: 1;
 }
-
+#title{
+    white-space: normal;
+}
 #map {
 	position: relative;
-    width: 498px;
+    width: 600px;
     height: 400px;
     outline: none;
+    border-radius: 5px !important;
 }
-
+#submitLocation{
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+}
 .mainContainer{
     display: flex;
     flex-direction: column;
@@ -87,14 +103,15 @@ button{
     background-color: #FFED73;
     transition: 0.3s;
 }
-.btn-logout-container{
-    display: flex;
-    justify-content: flex-end;
-}
+ .btn-logout-container#logout-container-id{
+    align-self: flex-end;
+    width: 55%;
+    flex-grow: 3;
+} 
 .btn-logout{
     display: inline-block;
     width: 82px;
-    padding: 7px 10px 7px 10px !important;
+    padding: 7px 7px 7px 7px !important;
     color: black !important;
     text-align: center;
     font-size: 13px;
@@ -106,7 +123,7 @@ button{
     border-radius: 0px;
     border: 3px solid #e25454;
     cursor: pointer;
-    margin: 10px;
+    margin: 8px;
     border-radius: 30px;
 }
 .btn-logout:hover{
