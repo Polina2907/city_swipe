@@ -30,6 +30,7 @@ def getCard(request):
         non_view_cards = Card.objects.exclude(users__id=user_id)
         user = User.objects.get(id=user_id)
 
+<<<<<<< HEAD
         revalant_cards = []
         for card in non_view_cards:
             if getDistance(user_lat, user_lng, card.latitude, card.longitude) <= 1.5:
@@ -51,6 +52,12 @@ def getUser(request):
         if user_location:
             result = dict(username=request.user.username, longitude = user_location[0].longitude, latitude = user_location[0].latitude)
             return HttpResponse(json.dumps(result), content_type='application/json')
+=======
+        if len(non_viewed_cards) >= 1:
+          card = dict(id = non_viewed_cards[0].id, name = non_viewed_cards[0].title, about = non_viewed_cards[0].about, latitude = non_viewed_cards[0].latitude, longitude = non_viewed_cards[0].longitude, photo = non_viewed_cards[0].photo.url)
+          non_viewed_cards[0].users.add(user) #добавление юзера к карточке
+          return HttpResponse(json.dumps(card), content_type='application/json')
+>>>>>>> b4f4e041c4a324fdf36676d9b30c6d4c1af7abe3
         else:
             return HttpResponse('404', content_type='application/json')
     else:

@@ -46,11 +46,11 @@ footer{
 .button_start{
 	display: inline-block;
     height: 70px;
-    padding: 0 40px;
+    padding: 0 29px;
     color: black !important;
     text-align: center;
     font-size: 17px;
-    font-weight: 500;
+    /* font-weight: 500; */
     line-height: 62px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
@@ -64,6 +64,10 @@ footer{
     margin: 10px;
     border-radius: 30px;
 }
+.button_start:hover{
+    background-color: #FFED73;
+    transition: 0.3s;
+}
 .btn-container{
     display: flex;
     justify-content: center;
@@ -76,5 +80,5 @@ footer{
 }
 .google-icon{
     height: 55%;
-    margin-right: 15px;
+    margin-right: 2px;
 }

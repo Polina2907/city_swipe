@@ -100,21 +100,24 @@ footer{
 }
 .btn-logout{
     display: inline-block;
-    height: 20px;
     width: 70px;
-    padding: 7px 7px 5px 9px;
+    padding: 7px 7px 7px 7px;
     color: black !important;
     text-align: center;
     font-size: 13px;
-    font-weight: 500;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     text-decoration: none !important;
     white-space: nowrap;
     background-color: transparent;
     border-radius: 0px;
-    border: 3px solid #FFED73;
+    border: 3px solid #e25454;
     cursor: pointer;
     margin: 10px;
     border-radius: 30px;
+}
+.btn-logout:hover{
+    background-color: #e25454;
+    transition: 0.3s;
+    color: white !important;
 }

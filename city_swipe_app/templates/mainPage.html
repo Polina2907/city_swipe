@@ -20,7 +20,16 @@
 	<title>CityReview</title>
 </head>
 <body>
+	<header>
+
+	</header>
+	<div class="btn-logout-container">
+		{% if user.is_authenticated %}
+			<a class="btn-logout" href="{% url 'logout' %}">Вийти</a>
+		{% endif %}
+	</div>
 	<div class="mainContainer">
+<<<<<<< HEAD
 		<div class="imgMain" id="card">
 		</div>
 	</div>
@@ -30,6 +39,19 @@
 		<button id="yes_btn" name="button" class="answer-btn">YES</button>
 	</div>
 
+=======
+		<div class="imgMain">
+			<span id="about"></span>
+			<img id="image" src="">
+		</div>
+	</div>
+	<div class="btn-container">
+		<button class="no_btn" name="button">НІ</button>			
+		<button class="not_know_btn" name="button">не знаю</button>
+		<button class="yes_btn" name="button">так</button>
+	</div>		
+	
+>>>>>>> b4f4e041c4a324fdf36676d9b30c6d4c1af7abe3
 </body>
 <script src="{% static 'city_swipe_app/main.js' %}"></script>
 </html>
