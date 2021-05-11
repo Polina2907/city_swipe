@@ -20,16 +20,18 @@
 	<title>CityReview</title>
 </head>
 <body>
+  <div id="question">
+    <span id="questionTitle" class="title"></span>
+  </div>
 	<div class="head-container">
-		<div id="question">	</div>
 		<div class="btn-logout-container" id="logout-container-id">
 			{% if user.is_authenticated %}
 				<a class="btn-logout" href="{% url 'logout' %}">Вийти</a>
 			{% endif %}
 		</div>
 	</div>
-	
-	<div class="mainContainer">
+
+	<div class="mainContainer" id="mainContainer">
 		<div class="imgMain" id="card">
 		</div>
 	</div>

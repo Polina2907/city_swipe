@@ -13,10 +13,11 @@ body{
     flex-direction: row;
     align-items: baseline;
 }
-.head-container:last-child{
-    flex-grow: 3 !important;
-}
+
 #question{
+	  position: absolute;
+		left: 50%;
+		top: 2%;
     margin: 25px 100px 45px 100px;
     letter-spacing: 0.5px;
     font-size: 20px;
@@ -24,8 +25,8 @@ body{
     background-color: #FFED73;
     border-radius: 30px;
     padding: 15px 40px 15px 40px;
-    width: 55%;
-    flex-grow: 1;
+    width: 50%;
+		margin-left: -25%;
 }
 .imgMain{
     height: 400px !important;
@@ -63,6 +64,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+	  margin-top: 100px;
 }
 button{
     display: inline-block;
@@ -95,19 +97,21 @@ button{
 .not_know_btn:hover{
     border-color: grey;
 }
+
 .btn-container{
     display: flex;
     justify-content: center;
 }
+
 .button:hover{
     background-color: #FFED73;
     transition: 0.3s;
 }
- .btn-logout-container#logout-container-id{
-    align-self: flex-end;
-    width: 55%;
-    flex-grow: 3;
-} 
+
+ .btn-logout-container{
+	 margin-left: auto;
+}
+
 .btn-logout{
     display: inline-block;
     width: 82px;
@@ -125,9 +129,16 @@ button{
     cursor: pointer;
     margin: 8px;
     border-radius: 30px;
-}
+		margin-left: auto;
+		margin-top: 50%;
+	}
+
 .btn-logout:hover{
     background-color: #e25454;
     transition: 0.3s;
     color: white !important;
+}
+
+.answer-btn {
+	  outline: none;
 }

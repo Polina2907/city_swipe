@@ -54,6 +54,7 @@ function submitAnswer(answer) {
 
 function submitLocation() {
   $.post("/city_swipe_app/setUserLocation/", {latitude: userLatitude, longtitude: userLongtitude});
+  document.getElementById('submitLocation').remove();
   getCard();
 }
 
@@ -72,10 +73,9 @@ function getCard() {
 
 function showLocationForm() {
     document.getElementsByClassName('btn-container')[0].hidden = true;
-    let title = document.createElement('span');
+    let title = document.getElementById('questionTitle');
     let mapElem = document.createElement('div');
     let button = document.createElement('button');
-    title.classList.add('title');
     title.innerHTML = 'Вкажіть ваше місце знаходження, аби ми змогли підібрати для вас місця, де ви найчастіше буваєте';
     mapElem.id = 'map';
     button.id = 'submitLocation';
@@ -85,9 +85,8 @@ function showLocationForm() {
       submitLocation();
     });
 
-    document.getElementById('question').appendChild(title);
     document.getElementById('card').appendChild(mapElem);
-    document.getElementById('card').appendChild(button);
+    document.getElementById('mainContainer').appendChild(button);
 
     let mymap = L.map('map').setView([50.907688, 34.796716], 13);
 
@@ -130,6 +129,7 @@ function showCard(card) {
     document.getElementsByClassName('btn-container')[0].hidden = false;
     document.getElementById('card').innerHTML = '';
 
+    document.getElementById('questionTitle').innerText = card.title;
     let photo = document.createElement('img');
     photo.src = card.photo;
     photo.id = 'cardImage'
