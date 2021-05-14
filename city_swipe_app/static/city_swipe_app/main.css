@@ -64,7 +64,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-	  margin-top: 100px;
+	margin-top: 57px;
 }
 button{
     display: inline-block;
@@ -140,5 +140,5 @@ button{
 }
 
 .answer-btn {
-	  outline: none;
+	outline: none !important;
 }

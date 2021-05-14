@@ -63,7 +63,8 @@ function getCard() {
   $.get("/city_swipe_app/getCard/", {latitude: userLatitude, longtitude: userLongtitude})
     .done(function(data) {
       if (data === 404) {
-        alert('card not found');
+        // alert('card not found');
+        return redirect('/city_swipe_app/end')
       }else {
         showCard(data);
       }

@@ -22,6 +22,9 @@ def mainPage(request):
     else:
         return render(request, "index.html")
 
+def endPage(request):
+    return render(request, "end.html")
+
 def getCard(request):
     if request.user.is_authenticated:
         user_lat = request.GET['latitude']

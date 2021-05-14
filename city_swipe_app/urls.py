@@ -13,4 +13,5 @@ urlpatterns = [
     path('getUser/', views.getUser, name='getUser'),
     path('setUserLocation/', views.setUserLocation, name='setUserLocation'),
     path('submitAnswer/', views.submitAnswer, name='submitAnswer'),
+    path('end/', views.end, name='end'),
 ]
