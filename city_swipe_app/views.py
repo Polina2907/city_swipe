@@ -23,7 +23,10 @@ def mainPage(request):
         return render(request, "index.html")
 
 def endPage(request):
-    return render(request, "end.html")
+    if request.user.is_authenticated:
+        return render(request, "end.html")
+    else:
+        return render(request, "index.html")
 
 def getCard(request):
     if request.user.is_authenticated:
@@ -98,4 +101,4 @@ def submitAnswer(request):
 def getDistance(lat1, lng1, lat2, lng2):
     point1 = (lat1, lng1)
     point2 = (lat2, lng2)
-    return geodesic(point1, point1).km
+    return geodesic(point1, point2).km
