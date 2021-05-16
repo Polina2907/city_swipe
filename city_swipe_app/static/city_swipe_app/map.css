@@ -1,0 +1,68 @@
+#map-container{
+    display: flex;
+    justify-content: center;
+}
+#map{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: 700px;
+    height: 500px;
+    border-radius: 15px;
+}
+#rateCards-container{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    margin-right: 20px;
+    padding: 15px;
+}
+.btn-reset{
+    position: absolute;
+    padding: 10px 30px;
+    color: black !important;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 5px solid #FFED73;
+    cursor: pointer;
+    margin: 15px 0px 10px 10px;
+    border-radius: 30px;
+}
+.btn-reset:hover{
+    background-color: #FFED73;
+    transition: 0.3s;
+}
+.btn-logout-container{
+	margin-left: auto;
+}
+
+.btn-logout{
+    width: 82px;
+    padding: 7px 7px 7px 7px !important;
+    color: black !important;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 3px solid #e25454;
+    cursor: pointer;
+    margin: 15px 8px 0px 0px;
+    border-radius: 30px;
+    position: absolute;
+    right: 0%;
+}
+
+.btn-logout:hover{
+    background-color: #e25454;
+    transition: 0.3s;
+    color: white !important;
+}

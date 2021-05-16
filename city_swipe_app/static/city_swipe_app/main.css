@@ -15,9 +15,9 @@ body{
 }
 
 #question{
-	  position: absolute;
-		left: 50%;
-		top: 2%;
+	position: absolute;
+	left: 50%;
+	top: 2%;
     margin: 25px 100px 45px 100px;
     letter-spacing: 0.5px;
     font-size: 20px;
@@ -26,7 +26,7 @@ body{
     border-radius: 30px;
     padding: 15px 40px 15px 40px;
     width: 50%;
-		margin-left: -25%;
+	margin-left: -25%;
 }
 .imgMain{
     height: 400px !important;
@@ -64,7 +64,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-	margin-top: 57px;
+	margin-top: 45px;
 }
 button{
     display: inline-block;
@@ -108,8 +108,8 @@ button{
     transition: 0.3s;
 }
 
- .btn-logout-container{
-	 margin-left: auto;
+.btn-logout-container{
+	margin-left: auto;
 }
 
 .btn-logout{

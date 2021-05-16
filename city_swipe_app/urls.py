@@ -14,4 +14,7 @@ urlpatterns = [
     path('setUserLocation/', views.setUserLocation, name='setUserLocation'),
     path('submitAnswer/', views.submitAnswer, name='submitAnswer'),
     path('endPage/', views.endPage, name='endPage'),
+    path('mapPage/', views.mapPage, name='mapPage'),
+    path('getAllCards/', views.getAllCards, name='getAllCards'),
+    path('resetUserLocation/', views.resetUserLocation, name='resetUserLocation'),
 ]

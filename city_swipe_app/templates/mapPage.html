@@ -1,0 +1,47 @@
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'city_swipe_app/map.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+       crossorigin=""></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/MarkerCluster.Default.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+    <title>CityReview</title>
+</head>
+<body>
+    <button id="resetLoc" class="btn-reset">Змінити місце розташування</button>
+    <div class="btn-logout-container" id="logout-container-id">
+        {% if user.is_authenticated %}
+            <a class="btn-logout" href="{% url 'logout' %}">Вийти</a>
+        {% endif %}
+    </div>    
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <div id="rateCards-container">
+        <div id="bestCards">
+            <h4>Найбільше позитивних голосів</h4>
+        </div>
+        <div id="worstCards">
+            <h4>Найбільше негативних голосів</h4>
+        </div>
+    </div>    
+ </body>
+<script src="{% static 'city_swipe_app/map.js' %}"></script>
+</html>

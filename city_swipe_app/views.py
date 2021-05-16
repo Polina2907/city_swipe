@@ -28,6 +28,12 @@ def endPage(request):
     else:
         return render(request, "index.html")
 
+def mapPage(request):
+    if request.user.is_authenticated:
+        return render(request, "mapPage.html")
+    else:
+        return render(request, "index.html")
+
 def getCard(request):
     if request.user.is_authenticated:
         user_lat = request.GET['latitude']
@@ -77,6 +83,14 @@ def setUserLocation(request):
     else:
         return redirect('/city_swipe_app/')
 
+def resetUserLocation(request):
+    if request.user.is_authenticated:
+        user = request.user
+        UserLocation.objects.get(user=user).delete()
+        return HttpResponse('ok', content_type='application/json')
+    else:
+        return redirect('/city_swipe_app/')
+
 @csrf_exempt
 def submitAnswer(request):
     if request.user.is_authenticated:
@@ -95,6 +109,17 @@ def submitAnswer(request):
 
             card.save()
             return HttpResponse('ok', content_type='application/json')
+    else:
+        return redirect('/city_swipe_app/')
+
+def getAllCards(request):
+    if request.user.is_authenticated:
+        allCards = Card.objects.all()
+        listOfCards = []
+        for card in allCards:
+            cardObject = dict(id = card.id, title = card.title, about = card.about, latitude = card.latitude, longitude = card.longitude, photo = card.photo.url, mark = card.avg_mark)
+            listOfCards.append(cardObject)
+        return HttpResponse(json.dumps(listOfCards), content_type='application/json')
     else:
         return redirect('/city_swipe_app/')
 

@@ -135,5 +135,9 @@ function showCard(card) {
     photo.id = 'cardImage'
     photo.dataset.cardid = card.id;
 
+    let aboutCard = document.createElement('aboutCard');
+    aboutCard.innerText = card.about;
+
+    document.getElementById('card').appendChild(aboutCard);
     document.getElementById('card').appendChild(photo);
 }
