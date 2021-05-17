@@ -137,6 +137,7 @@ function showCard(card) {
 
     let aboutCard = document.createElement('aboutCard');
     aboutCard.innerText = card.about;
+    aboutCard.className = 'aboutCard';
 
     document.getElementById('card').appendChild(aboutCard);
     document.getElementById('card').appendChild(photo);
