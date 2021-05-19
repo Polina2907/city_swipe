@@ -72,3 +72,33 @@ footer{
     background-color: #FFED73;
     transition: 0.3s;
 }
+
+.btn-logout-container{
+	margin-left: auto;
+}
+
+.btn-logout{
+    width: 82px;
+    padding: 7px 7px 7px 7px !important;
+    color: black !important;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 3px solid #e25454;
+    cursor: pointer;
+    margin: 15px 8px 0px 0px;
+    border-radius: 30px;
+    position: absolute;
+    right: 0%;
+}
+
+.btn-logout:hover{
+    background-color: #e25454;
+    transition: 0.3s;
+    color: white !important;
+}

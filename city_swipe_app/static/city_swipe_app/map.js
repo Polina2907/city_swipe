@@ -60,6 +60,7 @@ function fillStatistic(cards){
     for (let i = 0; i < cards.length; i++){
        if (k != 0) {
         bestCards.push(cards[i]);
+        k--;
        }
     }
 
@@ -71,6 +72,7 @@ function fillStatistic(cards){
     for (let i = 0; i < cards.length; i++){
        if (k != 0) {
         worstCards.push(cards[i]);
+        k--;
        }
     }
     showStatistic(bestCards, document.getElementById('bestCards'));

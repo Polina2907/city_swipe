@@ -125,7 +125,6 @@ button{
     text-decoration: none !important;
     white-space: nowrap;
     background-color: transparent;
-    border-radius: 0px;
     border: 3px solid #e25454;
     cursor: pointer;
     margin: 8px;
@@ -153,6 +152,7 @@ button{
     left: 50%;
     top: 20px;
     opacity: 0;
+    border-radius: 10px;
 }
 .imgMain:hover .aboutCard{
     opacity: 1;
